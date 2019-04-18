@@ -1,4 +1,4 @@
-package com.ibm.gol;
+package com.ibm.gol.logic;
 
 public class Grid {
 

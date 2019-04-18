@@ -1,9 +1,11 @@
-package com.ibm.gol;
+package com.ibm.gol.logic;
 
 import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import com.ibm.gol.logic.Grid;
 
 public class GridTest {
 

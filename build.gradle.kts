@@ -11,6 +11,9 @@ plugins {
     `java-library`
 }
 
+group = "com.ibm.gol"
+version = "1.0.0"
+
 repositories {
     // Use jcenter for resolving your dependencies.
     // You can declare any Maven/Ivy/file repository here.
