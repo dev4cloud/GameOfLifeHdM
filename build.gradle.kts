@@ -9,6 +9,7 @@
 plugins {
     // Apply the java-library plugin to add support for Java Library
     `java-library`
+    `maven-publish`
 }
 
 group = "com.ibm.gol"
@@ -20,13 +21,41 @@ repositories {
     jcenter()
 }
 
+//task sourceJar(type: Jar) {
+//    from sourceSets.main.allJava
+//}
+
 dependencies {
     // This dependency is exported to consumers, that is to say found on their compile classpath.
-    api("org.apache.commons:commons-math3:3.6.1")
+    //api("org.apache.commons:commons-math3:3.6.1")
 
     // This dependency is used internally, and not exposed to consumers on their own compile classpath.
-    implementation("com.google.guava:guava:27.0.1-jre")
+    //implementation("com.google.guava:guava:27.0.1-jre")
 
     // Use JUnit test framework
     testImplementation("junit:junit:4.12")
 }
+
+val maven_username: String? by project
+val maven_password: String? by project
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            from(components["java"])
+            
+        }
+    }
+    repositories {
+        maven {
+            // change to point to your repo, e.g. http://my.org/repo
+            url = uri("https://mymavenrepo.com/repo/gMeEUIpLpQJqRkWqgW0E/")
+            credentials {
+                username = maven_username  
+                password = maven_password 
+            }
+        }
+    }
+}
+
+
