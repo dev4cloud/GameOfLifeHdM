@@ -37,6 +37,11 @@ dependencies {
     testImplementation("junit:junit:4.12")
 }
 
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
 val maven_username: String? by project
 val maven_password: String? by project
 
