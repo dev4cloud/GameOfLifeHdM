@@ -21,6 +21,7 @@ repositories {
     jcenter()
 }
 
+//TODO: add source jar
 //task sourceJar(type: Jar) {
 //    from sourceSets.main.allJava
 //}
