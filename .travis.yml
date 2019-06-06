@@ -1,1 +1,8 @@
 language: java
+
+
+jdk:
+  - oraclejdk8
+
+script:
+  - ./gradlew publish --scan -s
